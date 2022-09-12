@@ -15,6 +15,10 @@ public class Student {
         else{throwingExceptionIfNegative(age);}
     }
     public void throwingExceptionIfNegative(int number) {
-        throw new Exception(number + " isn't positive!");
+        try {
+            throw new Exception("Age should be positive");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
